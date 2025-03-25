@@ -24,13 +24,26 @@
 # result = Sum_odd_number()
 # print("This is Odd number is :" , result)
 
-def Calculate():
-    number = int(input("Enter a number :"))
+# def Calculate():
+#     number = int(input("Enter a number :"))
     
-    if number % 2 == 0 :
-         print("این عدد زوج است ")
-    else :
-         print("این عدد فرد است")
+#     if number % 2 == 0 :
+#          print("این عدد زوج است ")
+#     else :
+#          print("این عدد فرد است")
             
             
-Calculate()
+# Calculate()
+
+def second_largest():
+    numberList = [10, 20, 4, 45, 99, 100, 50]
+    
+    max_num = max(numberList)
+
+    filtered_list = [num for num in numberList if num != max_num]
+
+    second_max = max(filtered_list) if filtered_list else None
+    
+    print("دومین عدد بزرگ:", second_max)
+
+second_largest()

@@ -35,15 +35,25 @@
             
 # Calculate()
 
-def second_largest():
-    numberList = [10, 20, 4, 45, 99, 100, 50]
+# def second_largest():
+#     numberList = [10, 20, 4, 45, 99, 100, 50]
     
-    max_num = max(numberList)
+#     max_num = max(numberList)
 
-    filtered_list = [num for num in numberList if num != max_num]
+#     filtered_list = [num for num in numberList if num != max_num]
 
-    second_max = max(filtered_list) if filtered_list else None
+#     second_max = max(filtered_list) if filtered_list else None
     
-    print("دومین عدد بزرگ:", second_max)
+#     print("دومین عدد بزرگ:", second_max)
 
-second_largest()
+# second_largest()
+
+def calculate():
+    number = int(input("Enter a number : "))
+
+    if number % 2 == 0:
+        print("This number is زوج.")
+    else :
+        print("This is fard")
+
+calculate()

@@ -48,12 +48,32 @@
 
 # second_largest()
 
-def calculate():
-    number = int(input("Enter a number : "))
+# def calculate():
+#     number = int(input("Enter a number : "))
 
-    if number % 2 == 0:
-        print("This number is زوج.")
-    else :
-        print("This is fard")
+#     if number % 2 == 0:
+#         print("This number is زوج.")
+#     else :
+#         print("This is fard")
 
-calculate()
+# calculate()
+
+def LuckyNumber():
+    number = input("Enter a number: ") 
+
+    zoj = []  
+    fard = []  
+
+    for digit in number: 
+        num = int(digit) 
+        if num % 2 == 0:
+            zoj.append(num)
+        else:
+            fard.append(num) 
+
+    if sum(zoj) == sum(fard) and len(zoj) == len(fard):
+        print("Lucky Number 🎉")
+    else:
+        print("Not a Lucky Number ❌")
+
+LuckyNumber()

@@ -58,22 +58,39 @@
 
 # calculate()
 
-def LuckyNumber():
-    number = input("Enter a number: ") 
+# def LuckyNumber():
+#     number = input("Enter a number: ") 
 
-    zoj = []  
-    fard = []  
+#     zoj = []  
+#     fard = []  
 
-    for digit in number: 
-        num = int(digit) 
-        if num % 2 == 0:
-            zoj.append(num)
-        else:
-            fard.append(num) 
+#     for digit in number: 
+#         num = int(digit) 
+#         if num % 2 == 0:
+#             zoj.append(num)
+#         else:
+#             fard.append(num) 
 
-    if sum(zoj) == sum(fard) and len(zoj) == len(fard):
-        print("Lucky Number 🎉")
+#     if sum(zoj) == sum(fard) and len(zoj) == len(fard):
+#         print("Lucky Number 🎉")
+#     else:
+#         print("Not a Lucky Number ❌")
+
+# LuckyNumber()
+
+def SpecialNumber():
+    number = int(input("Enter a number: "))
+
+    sum_of_digits = sum(int(digit) for digit in str(number))
+    first = int(str(number)[0])
+    end = int(str(number)[-1])
+
+    result = first * end 
+    num_length = len(str(number))
+
+    if sum_of_digits == result and num_length % 2 == 0:
+        print("Special Number 🎉")
     else:
-        print("Not a Lucky Number ❌")
+        print("Not a Special Number ❌")
 
-LuckyNumber()
+SpecialNumber()

@@ -78,19 +78,49 @@
 
 # LuckyNumber()
 
-def SpecialNumber():
-    number = int(input("Enter a number: "))
+# def SpecialNumber():
+#     number = int(input("Enter a number: "))
 
-    sum_of_digits = sum(int(digit) for digit in str(number))
-    first = int(str(number)[0])
-    end = int(str(number)[-1])
+#     sum_of_digits = sum(int(digit) for digit in str(number))
+#     first = int(str(number)[0])
+#     end = int(str(number)[-1])
 
-    result = first * end 
-    num_length = len(str(number))
+#     result = first * end 
+#     num_length = len(str(number))
 
-    if sum_of_digits == result and num_length % 2 == 0:
-        print("Special Number 🎉")
-    else:
-        print("Not a Special Number ❌")
+#     if sum_of_digits == result and num_length % 2 == 0:
+#         print("Special Number 🎉")
+#     else:
+#         print("Not a Special Number ❌")
 
-SpecialNumber()
+# SpecialNumber()
+# import math
+
+# try:
+#     n = int(input("یک عدد رو وارد کنید "))
+# except ValueError:
+#     print("عدد وارد نکردی ")
+
+# if n < 2:
+#     print("عدد اول نیست")
+# else:
+#     is_prime = True
+#     for i in range(2, int(math.sqrt(n)) + 1):
+#         if n % i == 0:
+#             is_prime = False
+#             break
+    
+#     if is_prime: 
+#         print("عدد اول است")
+#     else:
+#         print("عدد اول نیست")
+
+def Paladyom():
+    txt = input("یک متن رو وارد کنید :").lower()
+    
+    if txt == txt[::-1]:
+        print("پالیندروم است")
+    else : 
+        print("پالادیوم نیست ")
+    
+Paladyom()

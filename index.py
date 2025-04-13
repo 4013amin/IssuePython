@@ -115,12 +115,22 @@
 #     else:
 #         print("عدد اول نیست")
 
-def Paladyom():
-    txt = input("یک متن رو وارد کنید :").lower()
+# def Paladyom():
+#     txt = input("یک متن رو وارد کنید :").lower()
     
-    if txt == txt[::-1]:
-        print("پالیندروم است")
-    else : 
-        print("پالادیوم نیست ")
+#     if txt == txt[::-1]:
+#         print("پالیندروم است")
+#     else : 
+#         print("پالادیوم نیست ")
     
-Paladyom()
+# Paladyom()
+
+def multiple():
+    
+    total = 0 
+    for i in range(1 , 1000):
+        if i % 3 == 0 or i % 5 == 0 :
+            total += i
+    print(total)
+        
+multiple()

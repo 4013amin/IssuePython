@@ -81,12 +81,21 @@
 # def SpecialNumber():
 #     number = int(input("Enter a number: "))
 
+<<<<<<< Updated upstream
 #     sum_of_digits = sum(int(digit) for digit in str(number))
 #     first = int(str(number)[0])
 #     end = int(str(number)[-1])
 
 #     result = first * end 
 #     num_length = len(str(number))
+=======
+    sum_of_digits = sum(int(digit) for digit in str(number))
+    first = int(number[0])
+    end = int(number[-1])
+
+    result = first * end 
+    num_length = len(number)
+>>>>>>> Stashed changes
 
 #     if sum_of_digits == result and num_length % 2 == 0:
 #         print("Special Number 🎉")

@@ -148,3 +148,17 @@ def sum_even_fibonacci(num):
 num = 4000000
 result = sum_even_fibonacci(num)
 print("مجموع اعداد زوج در دنباله فیبوناچی که از چهار میلیون بیشتر نیستند:", result)
+
+
+
+def prime_factors(n):
+    factors = []
+    divisor = 2
+    
+    while n > 1 :
+        while n % divisor == 0 :
+            factors.append(divisor)
+            n //= divisor
+        divisor += 1 
+        
+        

@@ -125,12 +125,26 @@
     
 # Paladyom()
 
-def multiple():
+# def multiple():
     
-    total = 0 
-    for i in range(1 , 1000):
-        if i % 3 == 0 or i % 5 == 0 :   
-            total += i
-    print(total)
+#     total = 0 
+#     for i in range(1 , 1000):
+#         if i % 3 == 0 or i % 5 == 0 :   
+#             total += i
+#     print(total)
         
-multiple()
+# multiple()
+
+def sum_even_fibonacci(num):
+    a,b = 1,2
+    couner = 0
+    
+    while a <= num:
+        if a % 2 == 0 :
+            couner += a 
+        a,b, = b,a +b 
+        
+    return couner
+num = 4000000
+result = sum_even_fibonacci(num)
+print("مجموع اعداد زوج در دنباله فیبوناچی که از چهار میلیون بیشتر نیستند:", result)

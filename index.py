@@ -135,30 +135,33 @@
         
 # multiple()
 
-def sum_even_fibonacci(num):
-    a,b = 1,2
-    couner = 0
+# def sum_even_fibonacci(num):
+#     a,b = 1,2
+#     couner = 0
     
-    while a <= num:
-        if a % 2 == 0 :
-            couner += a 
-        a,b, = b,a +b 
+#     while a <= num:
+#         if a % 2 == 0 :
+#             couner += a 
+#         a,b, = b,a +b 
         
-    return couner
-num = 4000000
-result = sum_even_fibonacci(num)
-print("مجموع اعداد زوج در دنباله فیبوناچی که از چهار میلیون بیشتر نیستند:", result)
+#     return couner
+# num = 4000000
+# result = sum_even_fibonacci(num)
+# print("مجموع اعداد زوج در دنباله فیبوناچی که از چهار میلیون بیشتر نیستند:", result)
 
 
 
-def prime_factors(n):
-    factors = []
-    divisor = 2
-    
-    while n > 1 :
-        while n % divisor == 0 :
-            factors.append(divisor)
-            n //= divisor
-        divisor += 1 
-        
-        
+def largest_prime_factor(n):
+    divisor = 2  
+
+    while divisor * divisor <= n:  
+        if n % divisor == 0:  
+            n //= divisor  
+        else:
+            divisor += 1 
+
+    return n  
+
+number = 600851475143
+result = largest_prime_factor(number)
+print("بزرگ‌ترین مقسوم‌علیه اول عدد", number, "عبارت است از:", result)

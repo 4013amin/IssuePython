@@ -81,21 +81,18 @@
 # def SpecialNumber():
 #     number = int(input("Enter a number: "))
 
-<<<<<<< Updated upstream
 #     sum_of_digits = sum(int(digit) for digit in str(number))
 #     first = int(str(number)[0])
 #     end = int(str(number)[-1])
 
 #     result = first * end 
 #     num_length = len(str(number))
-=======
-    sum_of_digits = sum(int(digit) for digit in str(number))
-    first = int(number[0])
-    end = int(number[-1])
+#     sum_of_digits = sum(int(digit) for digit in str(number))
+#     first = int(number[0])
+#     end = int(number[-1])
 
-    result = first * end 
-    num_length = len(number)
->>>>>>> Stashed changes
+#     result = first * end 
+#     num_length = len(number)
 
 #     if sum_of_digits == result and num_length % 2 == 0:
 #         print("Special Number 🎉")
@@ -144,9 +141,6 @@
         
 # multiple()
 
-<<<<<<< HEAD
-    
-=======
 # def sum_even_fibonacci(num):
 #     a,b = 1,2
 #     couner = 0
@@ -177,4 +171,4 @@ def largest_prime_factor(n):
 number = 600851475143
 result = largest_prime_factor(number)
 print("بزرگ‌ترین مقسوم‌علیه اول عدد", number, "عبارت است از:", result)
->>>>>>> 905a372e1ce81c750bb48417282580d3d6c3acf8
+

@@ -81,20 +81,21 @@
 # def SpecialNumber():
 #     number = int(input("Enter a number: "))
 
-# #     sum_of_digits = sum(int(digit) for digit in str(number))
-# #     first = int(str(number)[0])
-# #     end = int(str(number)[-1])
-
-# #     result = first * end 
-# #     num_length = len(str(number))
-# =======
+<<<<<<< Updated upstream
 #     sum_of_digits = sum(int(digit) for digit in str(number))
-#     first = int(number[0])
-#     end = int(number[-1])
+#     first = int(str(number)[0])
+#     end = int(str(number)[-1])
 
 #     result = first * end 
-#     num_length = len(number)
-# >>>>>>> Stashed changes
+#     num_length = len(str(number))
+=======
+    sum_of_digits = sum(int(digit) for digit in str(number))
+    first = int(number[0])
+    end = int(number[-1])
+
+    result = first * end 
+    num_length = len(number)
+>>>>>>> Stashed changes
 
 #     if sum_of_digits == result and num_length % 2 == 0:
 #         print("Special Number 🎉")
@@ -137,10 +138,43 @@
     
 #     total = 0 
 #     for i in range(1 , 1000):
-#         if i % 3 == 0 or i % 5 == 0 :
+#         if i % 3 == 0 or i % 5 == 0 :   
 #             total += i
 #     print(total)
         
 # multiple()
 
+<<<<<<< HEAD
     
+=======
+# def sum_even_fibonacci(num):
+#     a,b = 1,2
+#     couner = 0
+    
+#     while a <= num:
+#         if a % 2 == 0 :
+#             couner += a 
+#         a,b, = b,a +b 
+        
+#     return couner
+# num = 4000000
+# result = sum_even_fibonacci(num)
+# print("مجموع اعداد زوج در دنباله فیبوناچی که از چهار میلیون بیشتر نیستند:", result)
+
+
+
+def largest_prime_factor(n):
+    divisor = 2  
+
+    while divisor * divisor <= n:  
+        if n % divisor == 0:  
+            n //= divisor  
+        else:
+            divisor += 1 
+
+    return n  
+
+number = 600851475143
+result = largest_prime_factor(number)
+print("بزرگ‌ترین مقسوم‌علیه اول عدد", number, "عبارت است از:", result)
+>>>>>>> 905a372e1ce81c750bb48417282580d3d6c3acf8

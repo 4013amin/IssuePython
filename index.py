@@ -157,18 +157,20 @@
 
 
 
-def largest_prime_factor(n):
-    divisor = 2  
+# def largest_prime_factor(n):
+#     divisor = 2  
 
-    while divisor * divisor <= n:  
-        if n % divisor == 0:  
-            n //= divisor  
-        else:
-            divisor += 1 
+#     while divisor * divisor <= n:  
+#         if n % divisor == 0:  
+#             n //= divisor  
+#         else:
+#             divisor += 1 
 
-    return n  
+#     return n  
 
-number = 600851475143
-result = largest_prime_factor(number)
-print("بزرگ‌ترین مقسوم‌علیه اول عدد", number, "عبارت است از:", result)
+# number = 600851475143
+# result = largest_prime_factor(number)
+# print("بزرگ‌ترین مقسوم‌علیه اول عدد", number, "عبارت است از:", result)
 
+def is_palindrome(num):
+    

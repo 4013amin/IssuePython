@@ -26,24 +26,24 @@
 
 # def Calculate():
 #     number = int(input("Enter a number :"))
-    
+
 #     if number % 2 == 0 :
 #          print("این عدد زوج است ")
 #     else :
 #          print("این عدد فرد است")
-            
-            
+
+
 # Calculate()
 
 # def second_largest():
 #     numberList = [10, 20, 4, 45, 99, 100, 50]
-    
+
 #     max_num = max(numberList)
 
 #     filtered_list = [num for num in numberList if num != max_num]
 
 #     second_max = max(filtered_list) if filtered_list else None
-    
+
 #     print("دومین عدد بزرگ:", second_max)
 
 # second_largest()
@@ -115,7 +115,7 @@
 #         if n % i == 0:
 #             is_prime = False
 #             break
-    
+
 #     if is_prime: 
 #         print("عدد اول است")
 #     else:
@@ -123,38 +123,37 @@
 
 # def Paladyom():
 #     txt = input("یک متن رو وارد کنید :").lower()
-    
+
 #     if txt == txt[::-1]:
 #         print("پالیندروم است")
 #     else : 
 #         print("پالادیوم نیست ")
-    
+
 # Paladyom()
 
 # def multiple():
-    
+
 #     total = 0 
 #     for i in range(1 , 1000):
 #         if i % 3 == 0 or i % 5 == 0 :   
 #             total += i
 #     print(total)
-        
+
 # multiple()
 
 # def sum_even_fibonacci(num):
 #     a,b = 1,2
 #     couner = 0
-    
+
 #     while a <= num:
 #         if a % 2 == 0 :
 #             couner += a 
 #         a,b, = b,a +b 
-        
+
 #     return couner
 # num = 4000000
 # result = sum_even_fibonacci(num)
 # print("مجموع اعداد زوج در دنباله فیبوناچی که از چهار میلیون بیشتر نیستند:", result)
-
 
 
 # def largest_prime_factor(n):
@@ -185,15 +184,24 @@
 
 # print(f"Largest palindrome: {max_palindrome} = {factors[0]} × {factors[1]}")
 
-def is_palindrome(n):
-    return str(n) == str(n)[::-1]
+# def is_palindrome(n):
+#     return str(n) == str(n)[::-1]
+#
+# max_palindrome = 0
+# for i in range(100, 1000):
+#     for j in range(i, 1000):
+#         product = i * j
+#         if is_palindrome(product) and product > max_palindrome :
+#             max_palindrome = product
+#             factors = (i, j)
+#
+# print(f"Largest palindrome: {max_palindrome} = {factors[0]} × {factors[1]}")
 
-max_palindrome = 0
-for i in range(100, 1000):
-    for j in range(i, 1000): 
-        product = i * j
-        if is_palindrome(product) and product > max_palindrome :
-            max_palindrome = product
-            factors = (i, j)
+def index():
+    number = int(input("Enter a number: "))
 
-print(f"Largest palindrome: {max_palindrome} = {factors[0]} × {factors[1]}")
+    for i in range(1, number + 1):
+        if i % 2 == 0:
+            print(i, "This is an even number.")
+        else:
+            print(i, "This is an odd number.")

@@ -172,6 +172,19 @@
 # result = largest_prime_factor(number)
 # print("بزرگ‌ترین مقسوم‌علیه اول عدد", number, "عبارت است از:", result)
 
+# def is_palindrome(n):
+#     return str(n) == str(n)[::-1]
+
+# max_palindrome = 0
+# for i in range(100, 1000):
+#     for j in range(i, 1000): 
+#         product = i * j
+#         if is_palindrome(product) and product > max_palindrome :
+#             max_palindrome = product
+#             factors = (i, j)
+
+# print(f"Largest palindrome: {max_palindrome} = {factors[0]} × {factors[1]}")
+
 def is_palindrome(n):
     return str(n) == str(n)[::-1]
 

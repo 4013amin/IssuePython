@@ -197,11 +197,22 @@
 #
 # print(f"Largest palindrome: {max_palindrome} = {factors[0]} × {factors[1]}")
 
-def index():
-    number = int(input("Enter a number: "))
+# def index():
+#     number = int(input("Enter a number: "))
 
-    for i in range(1, number + 1):
-        if i % 2 == 0:
-            print(i, "This is an even number.")
-        else:
-            print(i, "This is an odd number.")
+#     for i in range(1, number + 1):
+#         if i % 2 == 0:
+#             print(i, "This is an even number.")
+#         else:
+#             print(i, "This is an odd number.")
+
+
+
+count = 0 
+
+for i in range( 1 , 11):
+    if i % 2 == 0 :
+        print( i , "این عدد اول است ")
+        
+    else :
+        print(i , "عدد فرد است ")

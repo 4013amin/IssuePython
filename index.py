@@ -17,3 +17,6 @@ result_fard = sum(fard)
 
 print("مجموع اعداد زوج " , result_zoj)
 print("مجموع اعداد فرد " , result_fard)
+
+
+

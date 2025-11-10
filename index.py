@@ -19,17 +19,25 @@
 # print("مجموع اعداد فرد " , result_fard)
 
 
-
-# #جدا سازی اعداد تکراری 
+# #جدا سازی اعداد تکراری
 # def Remove_duplicates(add):
 #     add = input("Enter numbers separated by comma: ").split(',')
-    
+
 #     delete_dup = set(add)
 #     return delete_dup
 
 # print(Remove_duplicates(numbers))
 
-#تبدیل عدد به متن 
-numner = 1,2,3,4,5,6,7,8,9,10
-txt = str(numner)
-print(txt)
+# تبدیل عدد به متن
+# numner = 1,2,3,4,5,6,7,8,9,10
+# txt = str(numner)
+# print(txt)
+
+number = int(input("Enter a number: "))
+
+if number < 0:
+    print("این عدد منفی است ")
+elif number > 0:
+    print("این عدد مثبت است ")
+elif number == 0:
+    print("این عدد صفر است")

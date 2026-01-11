@@ -208,11 +208,35 @@
 
 
 
-count = 0 
+# count = 0 
 
-for i in range( 1 , 101):
-    if i % 2 == 0 :
-        print( i , "zoj")
+# for i in range( 1 , 101):
+#     if i % 2 == 0 :
+#         print( i , "zoj")
         
-    else :
-        print(i , "Fard")
+#     else :
+#         print(i , "Fard")
+
+
+# for i in range(1 , 20):
+#     if i % 2 == 0:
+#         if i == 18 :
+#             print(i , "This number is 18")
+#         print(i , "zoje")
+#     else :
+#         print(i , "Fard")
+            
+# numbers = []
+
+# if numbers is not None:
+#     numbers.append("Amin")
+#     numbers.append(5)
+#     numbers.clear()
+#     print(numbers)
+
+numbers = int(input("Enter a number"))
+
+result = str(numbers)
+resut_all = result + " Amin"
+
+print(resut_all)

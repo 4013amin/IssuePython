@@ -234,9 +234,9 @@
 #     numbers.clear()
 #     print(numbers)
 
-numbers = int(input("Enter a number"))
+numbers = [1 , 2,3,4,5,6,7,8,9,10]
 
-result = str(numbers)
-resut_all = result + " Amin"
+num = numbers.copy()
+num.clear()
 
-print(resut_all)
+print(num)

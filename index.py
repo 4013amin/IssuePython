@@ -234,9 +234,27 @@
 #     numbers.clear()
 #     print(numbers)
 
-numbers = [1 , 2,3,4,5,6,7,8,9,10]
+# numbers = [1 , 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-num = numbers.copy()
-num.clear()
+# print(numbers)
 
-print(num)
+# num = True
+
+# if num == True:
+#     print("is ok")
+# else :
+#     print("it is not ok") 
+
+# tem = 35
+# is_raing = False
+
+
+# sen = int(input("سنتون رو وارد کنید : "))
+
+# print("سن شما است :"  , sen)
+
+# if sen % 2 == 0:
+#     print("این عدد زوج است")
+# else:
+#     print("این عدد فرد است")
+

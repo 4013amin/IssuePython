@@ -47,17 +47,30 @@
 # print("This is zoj :" , zoj)
 # print("This is Fard" , fard)
 
-def calculate_factorial(num):
-    result = 1 
+# def calculate_factorial(num):
+#     result = 1 
     
-    for i in range(num):
+#     for i in range(num):
         
-        result = result * (i + 1)
-        print(i)
-    return result
+#         result = result * (i + 1)
+#         print(i)
+#     return result
         
 
-user = int(input("Enter a number : "))
+# user = int(input("Enter a number : "))
 
-answer = calculate_factorial(user)
-print("Factorial is:", answer)
+# answer = calculate_factorial(user)
+# print("Factorial is:", answer)
+
+txt_nuser = input("Enter a txt : ")
+char_count = {}
+
+for i in txt_nuser:
+    if i in char_count:
+        char_count[i] += 1
+    else:
+        char_count[i] = 1
+        
+print(char_count)
+    
+    

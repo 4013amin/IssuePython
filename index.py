@@ -12,6 +12,7 @@
 # print("اعداد زوج", zoj)
 # print("اعداد فرد ", fard)
 
+<<<<<<< HEAD
 # result_zoj = sum(zoj)
 # result_fard = sum(fard)
 
@@ -41,3 +42,11 @@ elif number > 0:
     print("این عدد مثبت است ")
 elif number == 0:
     print("این عدد صفر است")
+=======
+numbers = [1 , 2,3,4,5,6,7,8,9,10]
+
+num = numbers.copy()
+num.clear()
+
+print(num)
+>>>>>>> d86086c (Chage in ./index.py)

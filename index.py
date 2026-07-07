@@ -258,3 +258,12 @@
 # else:
 #     print("این عدد فرد است")
 
+
+n = -2
+
+for i in range(0, n, -1):
+    if i < 0 :
+        print("This is a کوچیک")
+    else:
+        print("This is not کوچک")
+    break

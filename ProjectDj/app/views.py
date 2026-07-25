@@ -4,6 +4,7 @@ from . import models
 from .serializers import TaskSerializer
 
 
-class TaskViewSet(viewsets.ModelViewSet):
+
+class TaskAPIView(viewsets.ModelViewSet):
     queryset = models.Task.objects.all()
     serializer_class = TaskSerializer

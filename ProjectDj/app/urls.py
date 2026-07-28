@@ -1,9 +1,10 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from . import views
-
+from accounts import views
 router = DefaultRouter()
-router.register(r'tasks', views.TaskAPIView, basename='task')
+router.register('auth', views.AuthViewSet, basename='auth')
+router.register('users', views.UserViewSet, basename='users')
+
 
 urlpatterns = [
     path('api/', include(router.urls)),

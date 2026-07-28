@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'app',
+    'accounts',
+    'atuntication'
 ]
 
 MIDDLEWARE = [

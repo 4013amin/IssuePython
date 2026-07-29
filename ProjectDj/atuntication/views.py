@@ -2,16 +2,42 @@ from django.shortcuts import render
 from rest_framework import permissions, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
-
-
 from . import models
 from . import serializers
+from rest_framework.authtoken.models import Token
 
 # Create your views here.
+
+class RegisterAPIview(APIView):
+    permission_classes = [permissions.AllowAny]
+    def post(self,request,format=None):
+        serializer = serializers.ActuationSerializer(data=request.data)
+        if serializer.is_valid():
+            user = serializer.save()
+            token, created = Token.objects.get_or_create(user=user)
+            return Response(
+                {
+                    "message": "Register successful.",
+                    "token": token.key,
+                    "user": serializer.data
+                },
+                status=status.HTTP_201_CREATED
+            )
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 class ProjectDashboard(APIView):
     permission_classes = [permissions.AllowAny]
     def get(self,request,format=None):
+        search = request.GET.get('search')
+        category = request.GET.get('category')
         projects = models.Project.objects.all()
+
+        if category:
+            projects = projects.filter(category=category)
+
+        if search:
+            projects = projects.filter(title__icontains=search)
         serializer = serializers.ProjectSerializer(projects,many=True)
         return Response(serializer.data)
 

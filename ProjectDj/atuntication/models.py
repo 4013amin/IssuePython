@@ -26,3 +26,12 @@ class Profile(models.Model):
     bio = models.TextField()
     def __str__(self):
         return self.user.username
+
+class Posts(models.Model):
+    name = models.CharField(max_length=150 , verbose_name="نام")
+    des = models.CharField(max_length=150 , verbose_name="توضیحات")
+    like = models.IntegerField(default=0 , verbose_name="لایک ها")
+    comments = models.TextField(verbose_name="کامنت ها")
+
+    def __str__(self):
+        return Posts.name

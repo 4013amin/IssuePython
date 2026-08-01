@@ -11,3 +11,9 @@ class ActuationSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Profile
         fields = '__all__'
+
+
+class PostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Posts
+        fields = '__all__'

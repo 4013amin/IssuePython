@@ -8,23 +8,6 @@ from rest_framework.authtoken.models import Token
 
 # Create your views here.
 
-class RegisterAPIview(APIView):
-    permission_classes = [permissions.AllowAny]
-    def post(self,request,format=None):
-        serializer = serializers.ActuationSerializer(data=request.data)
-        if serializer.is_valid():
-            user = serializer.save()
-            token, created = Token.objects.get_or_create(user=user)
-            return Response(
-                {
-                    "message": "Register successful.",
-                    "token": token.key,
-                    "user": serializer.data
-                },
-                status=status.HTTP_201_CREATED
-            )
-
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class ProjectDashboard(APIView):
     permission_classes = [permissions.AllowAny]
@@ -63,3 +46,18 @@ class ProjectDashboard(APIView):
             return Response(status=status.HTTP_204_NO_CONTENT)
         except models.Project.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
+
+
+class PostAPivew(APIView):
+    def get(self,request,format=None):
+        posts = models.Posts.objects.all()
+        serializer = serializers.PostSerializer(posts,many=True)
+        return Response(serializer.data)
+
+    def post(self , request):
+        serializer = serializers.PostSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data,status=status.HTTP_201_CREATED)
+        return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
+

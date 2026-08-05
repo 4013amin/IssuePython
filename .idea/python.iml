@@ -14,8 +14,9 @@
       <sourceFolder url="file://$MODULE_DIR$/ProjectDj/myenv/lib/python3.14/site-packages/django_stubs_ext/db" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ProjectDj/myenv/lib/python3.14/site-packages/pip/_internal" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/ProjectDj/myenv" />
+      <excludeFolder url="file://$MODULE_DIR$/myenv" />
     </content>
-    <orderEntry type="jdk" jdkName="~/PycharmProjects/IssuePython/ProjectDj/myenv" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="~\PycharmProjects\IssuePython\myenv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">

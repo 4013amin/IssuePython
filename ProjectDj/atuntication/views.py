@@ -47,17 +47,16 @@ class ProjectDashboard(APIView):
         except models.Project.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
 
-
-class PostAPivew(APIView):
-    def get(self,request,format=None):
-        posts = models.Posts.objects.all()
-        serializer = serializers.PostSerializer(posts,many=True)
-        return Response(serializer.data)
-
-    def post(self , request):
+class PostManager(APIView):
+    permission_classes = [permissions.AllowAny]
+    def add_post(self,request):
         serializer = serializers.PostSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data,status=status.HTTP_201_CREATED)
         return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
+
+    def show_all_posts(self):
+        serializer = serializers.PostSerializer(models.Posts.objects.all(),many=True)
+        return Response(serializer.data)
 
